@@ -6,7 +6,7 @@
 
 # 1. Installation
 
-Install requirements with `pip instlal -r requirements.txt`
+Install requirements with `pip instlal -r requirements.txt`.
 GPU-acceleration is supported for both the DNNs and the DSP operations
 
 # 2. Usage

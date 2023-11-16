@@ -1,6 +1,8 @@
 ### Two-stage Dereverberation Algorithm
 
+<p align="center">
 <img src="2sderev.png" width="800" alt="Spectrograms obtained from reverberant and dereverberated files.">
+</p>
 
 # 1. Installation
 

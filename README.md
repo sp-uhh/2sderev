@@ -1,6 +1,6 @@
-### Two-stage Dereverbreration Algorithm
+### Two-stage Dereverberation Algorithm
 
-<img src="https://raw.githubusercontent.com/sp-uhh/2sderev/main/2sderev.png" width="500" alt="Spectrograms obtained from reverberant and dereverberated files.">
+<img src="2sderev.png" width="500" alt="Spectrograms obtained from reverberant and dereverberated files.">
 
 # 1. Installation
 

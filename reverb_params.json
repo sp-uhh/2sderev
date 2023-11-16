@@ -1,0 +1,58 @@
+{
+    "0": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.300,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [4.5, 4.2, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "1": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.400,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [2.5, 1.5, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "2": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.500,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [4.5, 4.2, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "3": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.600,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [4.5, 4.0, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "4": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.700,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [4.5, 4.2, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "5": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.800,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [4.5, 4.2, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    },
+    "6": {
+        "room_dims": [7.0, 6.0, 3.5],
+        "t60": 0.900,
+        "center_mic_position": [3.0, 3.0, 1.8],
+        "source_position": [2.5, 1.5, 1.8],
+        "mic_array_radius": 0.16,
+        "mic_numbers": 2
+    }
+}

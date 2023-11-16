@@ -1,0 +1,122 @@
+{
+    "wpe_ci": {
+        "name": "E2EpWPE_CI",
+        "fs": 16000,
+        "channels": 2,
+        "n_fft": 512, 
+        "hop_length": 128,
+        "window_type": "sqrt_hann",
+        "wpe": {
+            "class": "RLSWPE",
+            "taps": 10,
+            "delay": 2,
+            "alpha": 0.99,
+            "eps_wpe": 1e-3
+        },
+        "dnn_wpe": {
+            "class": "LSTMNet",
+            "ckpt": "models/E2Ep_WPE_L1_CI_pra_crop.WPENet.pt",
+            "stats": "stats/reverberant/tr_{}_noiseless_reverberant_abs.pt"
+        },
+        "pf": {
+            "class": "Bypass"
+        },
+        "dnn_pf": {
+            "class": "Bypass",
+            "ckpt": "/export/home/lemercier/code/nwpe/.logs/subnetworks/void.pt",
+            "stats": "none"
+        }
+    },
+    "wpe+pf_ci": {
+        "name": "E2EpWPE+DNNPF_CI",
+        "fs": 16000,
+        "channels": 2,
+        "n_fft": 512, 
+        "hop_length": 128,
+        "window_type": "sqrt_hann", 
+        "wpe": {
+            "class": "RLSWPE",
+            "taps": 10,
+            "delay": 2,
+            "alpha": 0.99,
+            "eps_wpe": 1e-3
+        },
+        "dnn_wpe": {
+            "class": "LSTMNet",
+            "ckpt": "models/E2Ep_WPE_L1_CI_pra_crop.WPENet.pt",
+            "stats": "stats/reverberant/tr_{}_noiseless_reverberant_abs.pt"
+        },
+        "pf": {
+            "class": "WienerFilter",
+            "alpha_s": 0.20,
+            "alpha_n": 0.20,
+            "gmin": -20,
+            "bleeding": 0.00
+        },
+        "dnn_pf": {
+            "class": "LSTMNet",
+            "ckpt": "models/LSTM_L1_CI_pra_crop.PFNet.pt",
+            "stats": "stats/processed_CI/tr_{}_noiseless_reverberant_abs.pt"
+        }
+    },
+    "wpe_ha": {
+        "name": "E2EpWPE_HA",
+        "fs": 16000,
+        "channels": 2,
+        "n_fft": 512, 
+        "hop_length": 128,
+        "window_type": "sqrt_hann",
+        "wpe": {
+            "class": "RLSWPE",
+            "taps": 10,
+            "delay": 5,
+            "alpha": 0.99,
+            "eps_wpe": 1e-3
+        },
+        "dnn_wpe": {
+            "class": "LSTMNet",
+            "ckpt": "models/E2Ep_WPE_L1_HA_pra_crop.WPENet.pt",
+            "stats": "stats/reverberant/tr_{}_noiseless_reverberant_abs.pt"
+        },
+        "pf": {
+            "class": "Bypass"
+        },
+        "dnn_pf": {
+            "class": "Bypass",
+            "ckpt": "/export/home/lemercier/code/nwpe/.logs/subnetworks/void.pt",
+            "stats": "none"
+        }
+    },
+    "wpe+pf_ha": {
+        "name": "E2EpWPE+DNNPF_HA",
+        "fs": 16000,
+        "channels": 2,
+        "n_fft": 512, 
+        "hop_length": 128,
+        "window_type": "sqrt_hann", 
+        "wpe": {
+            "class": "RLSWPE",
+            "taps": 10,
+            "delay": 5,
+            "alpha": 0.99,
+            "eps_wpe": 1e-3
+        },
+        "dnn_wpe": {
+            "class": "LSTMNet",
+            "ckpt": "models/E2Ep_WPE_L1_HA_pra_crop.WPENet.pt",
+            "stats": "stats/reverberant/tr_{}_noiseless_reverberant_abs.pt"
+        },
+        "pf": {
+            "class": "WienerFilter",
+            "alpha_s": 0.20,
+            "alpha_n": 0.20,
+            "gmin": -20,
+            "bleeding": 0.00
+        },
+        "dnn_pf": {
+            "class": "LSTMNet",
+            "ckpt": "models/LSTM_L1_HA_pra_crop.PFNet.pt",
+            "stats": "stats/processed_HA/tr_{}_noiseless_reverberant_abs.pt"
+        }
+    }
+}
